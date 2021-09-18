@@ -1,0 +1,30 @@
+{
+	"name": "fds-backend",
+	"version": "1.0.0",
+	"description": "fds-backend",
+	"main": "server.js",
+	"scripts": {
+		"start": "APP_ENV=dev nodemon server.js",
+		"pro": "APP_ENV=pro node server.js > /server-logs/server.log 2> /server-logs/error.log",
+		"dev": "APP_ENV=dev nodemon server.js "
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"cors": "^2.8.5",
+		"dateformat": "^4.5.1",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-session": "^1.17.1",
+		"google-auth-library": "^7.0.4",
+		"log-timestamp": "^0.3.0",
+		"mariadb": "^2.5.4",
+		"mongoose": "^5.12.5",
+		"validator": "^13.6.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.12"
+	}
+}
