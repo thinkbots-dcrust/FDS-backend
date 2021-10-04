@@ -4,9 +4,7 @@ const http = require("http");
 const dateFormat = require("dateformat");
 const fs = require("fs");
 const path = require("path");
-const { config } = require("../config");
-const { sqlDB } = require("../handlers/sqlDB");
-const { sendMsgTo } = require("../utils");
+const { config } = require("./config.js");
 
 if (config.mode === "pro") require("log-timestamp");
 
@@ -37,19 +35,10 @@ console.log(
 	)} Server is starting...`
 );
 
-// Starting sql DB only if it started succesfully then the server starts
+//TODO:- Implement a database connection check before running server Starting sql DB only if it started successfully then the server starts
 
-sqlDB
-	.sync({ alter: true })
-	.then(() => {
-		server.listen(port);
-		server.on("listening", onListening);
-	})
-	.catch((err) => {
-		console.error(err);
-		const msg = `Server not starting db error :- ${err.message}`;
-		sendMsgTo(msg);
-	});
+server.listen(port);
+server.on("listening", onListening);
 
 /////////////////////////////////////////////////////////////////////////////Main Code Ended //////////////////////////////////////////////////////////////////////////////////////////
 

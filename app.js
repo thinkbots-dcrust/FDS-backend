@@ -1,8 +1,8 @@
 const cors = require("cors");
-const { config } = require("../config");
-const routes = require("../routes/api");
+const { config } = require("./config.js");
+const routes = require("./routes/api");
 const express = require("express");
-const { sendMsgTo } = require("../utils");
+const { sendMsgTo } = require("./utils");
 const app = express();
 const bodyParser = require("body-parser");
 const session = require("express-session");
