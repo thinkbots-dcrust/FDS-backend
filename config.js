@@ -12,7 +12,7 @@ const dev = {
 	},
 	db: {
 		client: "mysql",
-		host: "localhost",
+		host: "mariadb",
 		port: 3306,
 		user: "root",
 		password: "classmate",

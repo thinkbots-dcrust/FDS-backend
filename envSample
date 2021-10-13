@@ -1,4 +1,3 @@
 telegramBotToken="jlllll"
 errorNotificationchatIdTelegram=""
 SESSION_SECRET="j"
-MONGO_HOST="

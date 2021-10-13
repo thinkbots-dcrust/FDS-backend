@@ -6,8 +6,8 @@
 	"scripts": {
 		"start": "APP_ENV=development nodemon server.js",
 		"pro": "APP_ENV=pro node server.js > /server-logs/server.log 2> /server-logs/error.log",
-		"migrate": "knex migrate:latest",
-		"seed": "knex seed:run"
+		"migrate": "APP_ENV=development knex migrate:latest",
+		"seed": "APP_ENV=development knex seed:run"
 	},
 	"keywords": [],
 	"author": "",
@@ -24,6 +24,7 @@
 		"log-timestamp": "^0.3.0",
 		"mariadb": "^2.5.4",
 		"mongoose": "^5.12.5",
+		"mysql": "^2.18.1",
 		"validator": "^13.6.0"
 	},
 	"devDependencies": {

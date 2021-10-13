@@ -4,6 +4,10 @@
 
 ### API Guide :-
 
+####To Check if Server Running
+
+[GET] /isServerRunning
+
 ####Continue With Google
 
 Url - [POST] /users/google-auth
