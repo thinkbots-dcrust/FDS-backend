@@ -4,8 +4,8 @@
 	"description": "fds-backend",
 	"main": "server.js",
 	"scripts": {
-		"start": "APP_ENV=development nodemon server.js",
-		"pro": "APP_ENV=pro node server.js > /server-logs/server.log 2> /server-logs/error.log",
+		"start": "NODE_PATH=./ APP_ENV=development nodemon server.ts",
+		"pro": "NODE_PATH=./ APP_ENV=pro node server.js > /server-logs/server.log 2> /server-logs/error.log",
 		"migrate": "APP_ENV=development knex migrate:latest",
 		"seed": "APP_ENV=development knex seed:run"
 	},
@@ -28,7 +28,10 @@
 		"validator": "^13.6.0"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.12",
-		"prettier": "2.4.1"
+		"nodemon": "^2.0.13",
+		"prettier": "2.4.1",
+		"ts-node": "^10.3.0",
+		"tslint": "^6.1.3",
+		"typescript": "^3.9.10"
 	}
 }

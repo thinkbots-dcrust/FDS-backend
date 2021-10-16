@@ -1,3 +1,3 @@
-const { googleAuth } = require(googleAuth);
+const { googleAuth } = require("./googleAuth");
 
-export { googleAuth };
+module.export = { googleAuth };

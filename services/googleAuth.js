@@ -1,7 +1,7 @@
 const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-export async function googleAuth(tokenId) {
+async function googleAuth(tokenId) {
 	try {
 		const ticket = await client.verifyIdToken({
 			idToken: tokenId,
@@ -19,3 +19,5 @@ export async function googleAuth(tokenId) {
 		throw new Error("Google Auth Error");
 	}
 }
+
+module.export = { googleAuth };
